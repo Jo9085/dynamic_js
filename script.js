@@ -105,3 +105,24 @@ arrowButton.addEventListener('click', rotate);
 
 
 /*----------*/
+
+var leftarrowButton = document.getElementsByClassName('btn btn-primary my-2')[0];
+
+var unrotate = function(e) {
+    e.preventDefault();
+
+    var row = document.getElementsByClassName('row')[1];
+    firstChild = row.firstElementChild; 
+    row.insertBefore(firstChild, null);
+
+    /* marche aussi avec row.lastElementChild.nextSibling à la place de null */
+
+}
+
+leftarrowButton.addEventListener('click', unrotate); 
+
+/*----------*/
+
+var logo = document.getElementsByClassName('navbar-brand d-flex align-items-center')
+
+logo.addEventListener('keypress', changeBody)
